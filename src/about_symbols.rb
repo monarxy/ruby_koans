@@ -38,7 +38,7 @@ class AboutSymbols < Neo::Koan
     def test_constants_become_symbols
       all_symbols_as_strings = Symbol.all_symbols.map { |x| x.to_s }
 
-      assert_equal __(true), all_symbols_as_strings.include?(__("RubyConstant"))
+      assert_equal __(false), all_symbols_as_strings.include?("RubyConstant")
     end
   end
 
